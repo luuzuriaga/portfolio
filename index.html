@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="./images/favicon.png" />
+    <title>Lucero Uzuriaga | Web Developer Portfolio</title>
+
+    <meta name="description" content="Full stack web developer portfolio - Lucero Uzuriaga" />
+    <meta name="keywords" content="Lucero Uzuriaga, React, CSS, JavaScript, Web Developer" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <!-- ***** Navigation ***** -->
+    <nav class="nav" role="navigation">
+      <div class="container nav__content">
+        <div class="nav__logo">LU</div>
+        <ul class="nav__items">
+          <li class="nav__item">
+            <a href="#work" class="nav__link">Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="#frameworks" class="nav__link">Tech Stack</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ***** Header ***** -->
+    <header class="header" role="banner" id="top">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__text">
+            <h1 class="header__title">
+              Hi, I'm <span class="gradient-text">Lucero Uzuriaga</span>
+            </h1>
+            <p class="header__subtitle">Full Stack Web Developer</p>
+            <p class="header__description">
+              I create modern, responsive web applications with clean code and exceptional user experiences.
+            </p>
+            <div class="header__buttons">
+              <a href="#contact" class="btn btn--primary">Let's Connect</a>
+              <a href="#work" class="btn btn--secondary">View My Work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header__scroll">
+        <span>Scroll Down</span>
+        <div class="scroll-arrow"></div>
+      </div>
+    </header>
+
+    <main role="main">
+      <!-- ***** Work ***** -->
+      <section class="work" id="work">
+        <div class="container">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle">Here are some of my recent works</p>
+
+          <div class="work__grid">
+            <!-- Project placeholders - you'll add your projects here -->
+            <div class="work__card">
+              <div class="work__image-container">
+                <img src="./images/news_explorer.png" alt="Project 1" class="work__image" />
+                <div class="work__overlay">
+                  <span class="work__view">View Details</span>
+                </div>
+              </div>
+              <div class="work__content">
+                <h3 class="work__title">News Explorer</h3>
+                <p class="work__description">NewsExplorer is a modern web application built with React that allows users to search for and save news articles of interest. The app consumes the NewsAPI to fetch up-to-date news on any topic..</p>
+                <div class="work__tags">
+                  <span class="tag">React</span>
+                  <span class="tag">Vite</span>
+                  <span class="tag">API</span>
+                </div>
+                <div class="work__links">
+                  <a href="https://github.com/luuzuriaga/news-explorer-frontend" class="btn-icon" target="_blank" aria-label="View Live Site">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luuzuriaga/news-explorer-frontend" class="btn-icon" target="_blank" aria-label="View Source Code">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="work__card">
+              <div class="work__image-container">
+                <img src="./images/around-US.png" alt="Project 2" class="work__image" />
+                <div class="work__overlay">
+                  <span class="work__view">View Details</span>
+                </div>
+              </div>
+              <div class="work__content">
+                <h3 class="work__title">Around The US - React</h3>
+                <p class="work__description">Interactive web application that allows users to share and manage place cards. Users can update their profiles, add new cards with places, like, and delete their own cards.</p>
+                <div class="work__tags">
+                  <span class="tag">Node.js</span>
+                  <span class="tag">MongoDB</span>
+                  <span class="tag">Express</span>
+                </div>
+                <div class="work__links">
+                  <a href="https://luuzuriaga.github.io/web_project_around_react/" class="btn-icon" target="_blank" aria-label="View Live Site">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luuzuriaga/web_project_around_react" class="btn-icon" target="_blank" aria-label="View Source Code">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="work__card">
+              <div class="work__image-container">
+                <img src="./images/coffeeshop.png" alt="Project 3" class="work__image" />
+                <div class="work__overlay">
+                  <span class="work__view">View Details</span>
+                </div>
+              </div>
+              <div class="work__content">
+                <h3 class="work__title">Coffee Shop</h3>
+                <p class="work__description">Welcome to Triple Expresso, your online café where you can discover coffee recipes, reserve a table, and connect with us through social media.</p>
+                <div class="work__tags">
+                  <span class="tag">HTML</span>
+                  <span class="tag">CSS</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+                <div class="work__links">
+                  <a href="https://luuzuriaga.github.io/web_project_coffeeshop/" class="btn-icon" target="_blank" aria-label="View Live Site">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                      <polyline points="15 3 21 3 21 9"/>
+                      <line x1="10" y1="14" x2="21" y2="3"/>
+                    </svg>
+                  </a>
+                  <a href="https://github.com/luuzuriaga/web_project_coffeeshop" class="btn-icon" target="_blank" aria-label="View Source Code">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Tech Stack ***** -->
+      <section class="frameworks" id="frameworks">
+        <div class="container">
+          <h2 class="section-title">Technologies & Tools</h2>
+          <p class="section-subtitle">The tech stack I work with</p>
+
+          <div class="frameworks__grid">
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/3afe139d-12b4-45d7-af43-c170461563eb" alt="HTML5" />
+              <p>HTML5</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/823f35f6-0cd9-44a4-acfa-8f3e687c1b9d" alt="CSS" />
+              <p>CSS</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/a86e44d1-c4a6-4297-b487-65e9594fbbb3" alt="JavaScript" />
+              <p>JavaScript</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/5e0ea6e3-1fb0-40a7-b0f3-e03cbd9c0471" alt="React" />
+              <p>React</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/ba6e40f7-f0a4-4952-93e0-b11ce109c93b" alt="Vite" />
+              <p>Vite</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/bcd4bf21-52f1-498b-8363-ebde88e88f4c" alt="Node.js" />
+              <p>Node.js</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/f9bbe27e-bc3a-4714-8b18-a9422dfde6d7" alt="Express" />
+              <p>Express</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/94871ae8-7c1f-4cff-9168-0b4f2b2d405b" alt="MongoDB" />
+              <p>MongoDB</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/f778ce5f-f3ef-4ff2-bd7d-e9edf7977539" alt="Firebase" />
+              <p>Firebase</p>
+            </div>
+            <div class="framework__card">
+              <img src="https://github.com/user-attachments/assets/5b2a6798-48a4-4e93-a1a7-c077f84219c1" alt="Figma" />
+              <p>Figma</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** About ***** -->
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__content">
+            <div class="about__image-container">
+              <div class="about__image-bg"></div>
+              <img src="./images/aboutmecold.jpg" alt="Lucero Uzuriaga" class="about__image" />
+            </div>
+            <div class="about__text">
+              <h2 class="section-title">About Me</h2>
+              <p class="section-subtitle">Get to know me better</p>
+              <p>
+                I am currently enrolled in an intensive Web Development bootcamp at TripleTen and pursuing a degree in Systems and Computer Engineering at Universidad Continental. I specialize in HTML, CSS, JavaScript, React, and user-centered design, with the goal of creating intuitive and functional interfaces that enhance the digital experience.
+
+              </p>
+              <p>
+                My journey in web development has equipped me with a diverse skill set, from crafting pixel-perfect 
+                frontends to architecting robust backend systems. I'm always eager to learn new technologies and 
+                take on challenging projects.
+              </p>
+              <p>
+                When I'm not coding, you can find me exploring new tech trends, contributing to open-source projects, 
+                or sharing knowledge with the developer community.
+              </p>
+              <a href="docs/Lucero_Uzuriaga_CV.pdf" class="btn btn--primary">Download Resume</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***** Contact ***** -->
+      <section class="contact" id="contact">
+        <div class="container">
+          <h2 class="section-title">Let's Work Together</h2>
+          <p class="section-subtitle">Have a project in mind? Let's make it happen</p>
+          
+          <div class="contact__content">
+            <p>
+              I'm currently available for freelance work and full-time opportunities. 
+              Whether you need a modern website, a web application, or just want to discuss 
+              your ideas, I'd love to hear from you!
+            </p>
+            <a href="mailto:lucero@example.com" class="btn btn--primary btn--large">Get In Touch</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ***** Footer ***** -->
+    <footer class="footer" role="contentinfo">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__social">
+            <a href="https://github.com/eBraulio/" target="_blank" aria-label="GitHub Profile">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/braulio-banuelos-8bb9b579/" target="_blank" aria-label="LinkedIn Profile">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+          </div>
+          <p class="footer__text">&copy; 2025 Lucero Uzuriaga. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#top" class="back-to-top" aria-label="Back to Top">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="12" y1="19" x2="12" y2="5"></line>
+        <polyline points="5 12 12 5 19 12"></polyline>
+      </svg>
+    </a>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
