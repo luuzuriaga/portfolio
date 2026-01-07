@@ -1,4 +1,34 @@
 /* -----------------------------------------
+  Create Scroll Darkness Overlay
+ ---------------------------------------- */
+
+// Create overlay element for scroll darkness effect
+const scrollOverlay = document.createElement('div');
+scrollOverlay.className = 'scroll-overlay';
+document.body.appendChild(scrollOverlay);
+
+/* -----------------------------------------
+  Scroll Darkness Effect
+ ---------------------------------------- */
+
+window.addEventListener('scroll', () => {
+  const scrollY = window.scrollY;
+  const headerHeight = document.querySelector('.header').offsetHeight;
+  
+  // Calculate opacity based on scroll position
+  // Starts at 100vh (header height) and reaches max at 200vh
+  const startFade = headerHeight * 0.8; // Start fading at 80% of header
+  const maxFade = headerHeight * 1.5;
+  
+  if (scrollY > startFade) {
+    const opacity = Math.min((scrollY - startFade) / (maxFade - startFade) * 0.7, 0.7);
+    scrollOverlay.style.background = `rgba(26, 20, 16, ${opacity})`;
+  } else {
+    scrollOverlay.style.background = 'rgba(26, 20, 16, 0)';
+  }
+});
+
+/* -----------------------------------------
   Focus outline only for keyboard users 
  ---------------------------------------- */
 
@@ -87,10 +117,10 @@ const nav = document.querySelector('.nav');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-    nav.style.background = 'rgba(10, 10, 10, 0.98)';
-    nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.5)';
+    nav.style.background = 'transparent';
+    nav.style.boxShadow = '0 4px 20px rgba(255, 217, 61, 0.3)';
   } else {
-    nav.style.background = 'rgba(10, 10, 10, 0.95)';
+    nav.style.background = 'transparent';;
     nav.style.boxShadow = 'none';
   }
 });
@@ -119,7 +149,7 @@ const animateElements = document.querySelectorAll('.work__card, .framework__card
 animateElements.forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  el.style.transition = 'opacity 0.8s ease, transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
   observer.observe(el);
 });
 
@@ -155,7 +185,7 @@ window.addEventListener('scroll', highlightNavigation);
 const style = document.createElement('style');
 style.textContent = `
   .nav__link.active {
-    color: var(--text-primary);
+    color: var(--primary);
   }
   .nav__link.active::after {
     width: 100%;
@@ -164,7 +194,7 @@ style.textContent = `
 document.head.appendChild(style);
 
 /* -----------------------------------------
-  Loading Animation (Optional)
+  Loading Animation
  ---------------------------------------- */
 
 window.addEventListener('load', () => {
@@ -175,3 +205,75 @@ window.addEventListener('load', () => {
     document.body.style.opacity = '1';
   }, 100);
 });
+
+/* -----------------------------------------
+  Parallax Effect for Header
+ ---------------------------------------- */
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  if (header && scrolled < header.offsetHeight) {
+    header.style.transform = `translateY(${scrolled * 0.5}px)`;
+  }
+});
+
+/* -----------------------------------------
+  Random Ticket Rotation on Hover
+ ---------------------------------------- */
+
+const workCards = document.querySelectorAll('.work__card');
+
+workCards.forEach(card => {
+  card.addEventListener('mouseenter', () => {
+    const randomRotation = (Math.random() - 0.5) * 6; // -3 to 3 degrees
+    card.style.setProperty('--hover-rotation', `${randomRotation}deg`);
+  });
+});
+
+/* -----------------------------------------
+  Animated Skills Entrance
+ ---------------------------------------- */
+
+const skillCards = document.querySelectorAll('.framework__card');
+
+skillCards.forEach((card, index) => {
+  card.style.animationDelay = `${index * 0.1}s`;
+});
+
+/* -----------------------------------------
+  Sunflower Particles Effect (Optional Enhancement)
+ ---------------------------------------- */
+
+function createSunflowerParticle() {
+  const particle = document.createElement('div');
+  particle.style.position = 'fixed';
+  particle.style.fontSize = `${Math.random() * 20 + 10}px`;
+  particle.style.left = `${Math.random() * 100}%`;
+  particle.style.top = '-50px';
+  particle.style.opacity = '0.3';
+  particle.style.pointerEvents = 'none';
+  particle.style.zIndex = '0';
+  particle.textContent = '🌻';
+  particle.style.transition = 'all 10s linear';
+  
+  document.body.appendChild(particle);
+  
+  setTimeout(() => {
+    particle.style.top = '100vh';
+    particle.style.transform = `rotate(${Math.random() * 360}deg)`;
+    particle.style.opacity = '0';
+  }, 100);
+  
+  setTimeout(() => {
+    particle.remove();
+  }, 10000);
+}
+
+// Create particles occasionally
+setInterval(() => {
+  if (Math.random() > 0.7) {
+    createSunflowerParticle();
+  }
+}, 3000);
